@@ -66,4 +66,4 @@ with gr.Blocks() as demo:
         #msg.submit(respond, [msg, chatbot], [msg, chatbot, explanation])
         msg.submit(respond, [msg, chatbot], [msg, chatbot])
 
-demo.launch(share=True)
+demo.launch(share=True, server_name="0.0.0.0")
