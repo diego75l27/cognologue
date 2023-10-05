@@ -32,7 +32,7 @@ def respond(message, chat_history):
         .get("StartupUserCase", ["url", "name"])
         .with_near_text({"concepts": [f"{message}"]})
         .with_generate(single_prompt="Explain {description} and {want} and {so} as you might to a business owner")
-        .with_limit(20)
+        .with_limit(10)
         .do()
     )
 
@@ -59,10 +59,11 @@ def respond(message, chat_history):
 with gr.Blocks() as demo:
     with gr.Tab("Cognologue"):
         chatbot = gr.Chatbot()
-        msg = gr.Textbox()
-        explanation = gr.Textbox(label="Explanation")
-        clear = gr.ClearButton([msg, chatbot, explanation])
+        msg = gr.Textbox(label="Type here your Usecase")
+        #explanation = gr.Textbox(label="Explanation")
+        clear = gr.ClearButton([msg, chatbot])
 
-        msg.submit(respond, [msg, chatbot], [msg, chatbot, explanation])
+        #msg.submit(respond, [msg, chatbot], [msg, chatbot, explanation])
+        msg.submit(respond, [msg, chatbot], [msg, chatbot])
 
-demo.launch(share=True, server_name="0.0.0.0")
+demo.launch(share=True)
