@@ -59,7 +59,7 @@ def respond(message, chat_history):
 with gr.Blocks() as demo:
     with gr.Tab("Cognologue"):
         chatbot = gr.Chatbot()
-        msg = gr.Textbox(label="Type here your Usecase")
+        msg = gr.Textbox(label="Type here your use case...")
         #explanation = gr.Textbox(label="Explanation")
         clear = gr.ClearButton([msg, chatbot])
 
