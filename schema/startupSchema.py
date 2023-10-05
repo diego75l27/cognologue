@@ -14,7 +14,9 @@ class startupSchema:
                     "modelVersion": "002",
                     "type": "text"
                 },
-                "generative-openai": {},
+                "generative-openai": {
+                    "model": "text-davinci-003"
+                },
                 "properties": [
                     {
                         "name": "idStartup",
