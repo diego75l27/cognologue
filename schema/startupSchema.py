@@ -15,7 +15,6 @@ class startupSchema:
                     "type": "text"
                 },
                 "generative-openai": {
-                    "model": "text-davinci-003"
                 },
                 "properties": [
                     {
