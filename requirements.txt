@@ -1,0 +1,3 @@
+gradio
+weaviate-client
+python-dotenv
